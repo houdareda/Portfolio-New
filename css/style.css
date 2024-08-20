@@ -14,6 +14,29 @@
     --light_Bg:  #ECF8FF;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+
+    filter: blur(10px);
+    background: #7134fe3f;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main_color);
+}
+
+::selection{
+    color: var(--main_color);
+    background: var(--yello_color);
+}
+
+
+
 h1,h2,h3,h4,h5,h6{
     color: var(--title_color);
 }
@@ -582,8 +605,263 @@ footer p span{
     color: var(--yello_color);
 }
 
+
+
 /* End Footer */ 
 
 
+.open_menu{
+    display: none;
+}
+.close_menu{
+    display: none;
+}
 
 
+@media (min-width:1600px) {
+    .hero .div_img{
+        width: 45%;
+    }
+}
+
+
+@media (max-width:1000px) {
+    .top_sec h3{
+        font-size: 25px;
+    }
+    header nav{
+        position: relative;
+    }
+    header nav .links{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid #9999996d;
+        padding: 20px 70px;
+        border-radius: 20px;
+        opacity: 0;
+        z-index: -1111;
+        transition: 0.3s;
+    }
+
+    header nav .links.active{
+        opacity: 1;
+        z-index: 1000;
+    }
+    .div_btns{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    .open_menu{
+        display: block;
+        font-size: 30px;
+
+    }
+    .close_menu{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        z-index: 1000;
+    }
+
+
+
+
+    /* Start Hero */ 
+    .hero {
+        height: auto;
+    }
+    .hero .container{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .hero .div_img{
+        position: relative;
+    }
+    .hero .div_text{
+        padding-top: 80px;
+        width: 100%;
+        text-align: center;
+    }
+    .hero .div_text h1{
+        font-size: 70px;
+    }
+    .hero .div_text .div_btns{
+        justify-content: center;
+    }
+
+
+    /* Service*/
+
+    .service .container .box{
+        width: 100%;
+    }
+
+    /* Skills */
+
+    .skills .container{
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .skills .container .div_text{
+        width: 100%;
+    }
+    .skills .container .div_skills{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+
+    /* portfolio */ 
+
+
+    .portfolio .container{
+        width: 90%;
+    }
+
+    .contact .info{
+        width: 250px;
+        padding: 15px;
+    }
+    .contact .info .box .icon{
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .contact .info .box .icon img{
+        width: 18px;
+    }
+    .contact .info .box .text a{
+        font-size: 14px;
+    }
+    .contact form{
+        width: calc(100% - 280px);
+    }
+    .contact .container{
+        width: 90%;
+    }
+}
+
+
+
+/* Responsive on Mobile */
+
+
+@media (max-width: 550px) {
+    .top_sec h4{
+        font-size: 16px;
+    }
+    .top_sec{
+        padding: 0 30px;
+    }
+    .top_sec h3{
+        font-size: 22px;
+    }
+    .btn{
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    header .logo img{
+        width: 120px;
+    }
+
+
+    /* Hero */ 
+    .hero .div_text h4{
+        font-size: 24px;
+    }
+    .hero .div_text h1{
+        font-size: 50px;
+    }
+    .hero .div_text p{
+        font-size: 15px;
+    }
+    .hero .div_img{
+        width: 80%;
+    }
+
+    /* service */ 
+
+    .service .container{
+        width: 90%;
+    }
+
+    .service .container .box .div_text h3{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .service .container .box .div_text p{
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    .service .container .box{
+        padding: 15px 10px;
+    }
+
+
+    /* skills */ 
+
+    .skills .container .div_text h2{
+        font-size: 25px;
+    }
+    .skills .container .div_skills{
+        width: 100%;
+    }
+
+    .skills .container .box p{
+        font-size: 18px;
+    }
+
+
+
+    /* portfolio */ 
+
+    .portfolio .top_sec .links{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+
+    .portfolio .container .box{
+        width: 49%;
+    }
+    .portfolio .container .box.big_box{
+        width: 100%;
+    }
+
+
+
+    /* contact */ 
+
+    .contact form button{
+        padding: 14px 30px;
+    }
+
+    .contact .container{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .contact form{
+        width: 100%;
+    }
+    .contact .info{
+        width: 100%;
+    }
+
+    /* footer */ 
+
+    footer .div_links .links a{
+        padding: 0 15px;
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 14px;
+    }
+}
